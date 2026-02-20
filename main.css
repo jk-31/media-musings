@@ -64,10 +64,12 @@ header h1
 header h1 a {
   text-decoration: none;
   color: rgb(161, 161, 216);
+  margin: 1rem;
 }
 
 header h2 {
   color: #523c61;
+  margin-left: 1rem;
 }
 
 
