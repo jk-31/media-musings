@@ -99,7 +99,7 @@ nav.topnav a {
   font-style: italic;
 	display: block;
 	text-decoration: none;
-	color: rgb(47, 33, 87); /* ← you can change this */
+	color: rgb(75, 67, 99); /* ← you can change this */
   transition: all 0.75s ease-in-out;
 }
 
@@ -204,6 +204,7 @@ section.campus section { /* ← all 6 of the building sections */
 section.campus h3 {
   font-size: 110%;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
   margin: 0.5rem;
 }
 
@@ -231,6 +232,7 @@ section.campus figcaption {
 
 footer {
   background-color: darkcyan;
+  text-align: center;
 }
 
 footer small { 
