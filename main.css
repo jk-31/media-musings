@@ -17,7 +17,7 @@ div.wrapper {
   max-width: 64rem;
   margin-left: auto;
   margin-right: auto;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 20px 20px 20px black;
 }
 
@@ -45,7 +45,6 @@ header div.site-name {
 
 header h1 
   {
-  color: #ff5733;
   font-family: "Bitcount Grid Double", system-ui;
   font-size: 150%;
   font-optical-sizing: auto;
@@ -112,9 +111,8 @@ nav.topnav a:hover {
 /* ⬇ Make this a grid container */
 main.homepage {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 100%;
+  gap: 1rem;
+  background: rgb(79, 70, 87);
 }
 
 article.blog {
@@ -125,13 +123,14 @@ article.blog {
 /* ⬇ Headline for the blog */
 article.blog h2 { 
   font-size: 110%;
+  font-style: italic;
   border-bottom: 5px solid #626262;
 }
 
 /* ⬇ Text in the blog */
 article.blog p { /* ← blog text */
-  font-size: 125%;
-  line-height: 1.5rem;
+  font-size: 100%;
+  line-height: 1.2rem;
 }
 
 /* ⬇ This controls both asides */
@@ -187,13 +186,15 @@ main.homepage aside li a:hover {
 /* ⬇ Section that contains entire building area */
 section.campus	{
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  max-width: 100%;
 }	
 
 /* ⬇ This applies to each building section */
 section.campus section { /* ← all 6 of the building sections */
- 
+ width: 100%;
 }
 
 /* ⬇ Name of each building */
@@ -228,13 +229,13 @@ footer {
 }
 
 footer small { 
-  font-size: 110%;
+  font-size: 105%;
   line-height: 1px;
 }
 
 /* ⬇ The link in the footer */
 footer a {
-  
+  color: #cda8e6;
 }
 
 
