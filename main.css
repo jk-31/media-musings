@@ -13,15 +13,15 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color:rgb(64, 106, 107);
-  color: white;
+  color: rgba(255, 255, 255, 0.904);
 }
 	
 div.wrapper {
-  max-width: 64rem;
-  margin: 0 auto;
-  padding: 0;
+  width: 960px;
+  margin: 1em auto 0 auto;
   background-color: white;
-  border: 2px solid rgb(255, 255, 255);
+  border: 2px solid rgb(191, 164, 212);
+  border-radius: 4px;
   box-shadow: 20px 20px 20px black;
 }
 
@@ -42,14 +42,14 @@ header {
 
 /* ⬇ Contains both the h1 and h2 */
 header div.site-name { 
-  color: #541b6e;
+  color: #f8f8f8;
   font-style: italic;
 }
 
 header h1 
   {
   font-family: "Bitcount Grid Double", system-ui;
-  font-size: 150%;
+  font-size: 160%;
   font-optical-sizing: auto;
   font-weight:500;
   font-style: normal;
@@ -65,11 +65,13 @@ header h1 a {
   text-decoration: none;
   color: rgb(161, 161, 216);
   margin: 1rem;
+  text-transform:lowercase;
 }
 
 header h2 {
-  color: #523c61;
+  color: rgb(196, 196, 243);
   margin-left: 1rem;
+  text-transform:lowercase;
 }
 
 
@@ -78,6 +80,8 @@ header h2 {
 ---------------------------------------*/	
 /* ⬇ Entire navigation area */
 nav.topnav { 
+  background-color: rgb(184, 196, 201);
+  border-radius: 2rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 100%;
 }
@@ -94,7 +98,7 @@ nav.topnav li {
 /* ⬇ Links in the navigation bar */
 nav.topnav a {
 	padding: 1rem 2rem;
-	text-transform: uppercase;
+	text-transform:lowercase;
   font-weight: bold;
   font-style: italic;
 	display: block;
@@ -117,14 +121,16 @@ nav.topnav a:hover {
 /* ⬇ Make this a grid container */
 main.homepage {
   display: grid;
+  grid-template-columns:1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
   background: rgb(79, 70, 87);
+  text-transform: lowercase;
 }
 
 article.blog {
   grid-column: 1/4;
   grid-row: 1/3;
-  padding: 0.5rem;
-  max-width: 750px;
+  padding: 1em;
 }
 /* ⬇ Headline for the blog */
 article.blog h2 { 
@@ -135,13 +141,18 @@ article.blog h2 {
 
 /* ⬇ Text in the blog */
 article.blog p { /* ← blog text */
-  font-size: 100%;
-  line-height: 1.2rem;
+  font-size: 130%;
+  line-height: 1.4;
 }
 
 /* ⬇ This controls both asides */
 main.homepage aside { 
-  
+  background-color: rgb(184, 196, 201);
+  border-radius: 2em;
+  margin-top: 10px;
+  padding: 1em;
+  margin-right: 0.5em;
+  color: rgb(79, 70, 87);
 }
 
 /* ⬇ Recent aside */
@@ -161,6 +172,7 @@ main.homepage aside h3 {
   font-size: 110%;
   line-height: 2.5rem;
   font-style: italic;
+  margin-bottom: .5em;
 }
 
 /* ⬇ Unordered list in asides */
@@ -191,9 +203,12 @@ main.homepage aside li a:hover {
 ---------------------------------------*/
 /* ⬇ Section that contains entire building area */
 section.campus	{
+  background-color: #3b7272;
+  grid-column: 1/5;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  padding: 1em;
 }	
 
 /* ⬇ This applies to each building section */
@@ -202,7 +217,7 @@ section.campus section { /* ← all 6 of the building sections */
 
 /* ⬇ Name of each building */
 section.campus h3 {
-  font-size: 110%;
+  font-size: 100%;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-style: italic;
   margin: 0.5rem;
@@ -210,19 +225,20 @@ section.campus h3 {
 
 /* ⬇ Contains each building's image and caption */
 section.campus figure {
-  font-size: 75%;
+  font-size: 80%;
   padding: 10px;
 }
 
 /* ⬇ Picture of each building */
 section.campus img {
 	border: 5px solid ghostwhite; /* ← you can change this */
+  border-radius: 10px;
 	box-shadow: 0px 10px 13px -5px #626262; /* ← you can change this */
 }
 
 /* ⬇ Caption text under each building */
 section.campus figcaption {
-  font-size: 90%;
+  font-size: 110%;
 }
 
 
@@ -233,6 +249,8 @@ section.campus figcaption {
 footer {
   background-color: darkcyan;
   text-align: center;
+  padding: 1em 2em;
+  text-transform:lowercase;
 }
 
 footer small { 
@@ -251,9 +269,134 @@ footer a {
 /* TABLET
 ---------------------------------------*/
 
+@media (max-width: 768px) {
 
+  div.wrapper {
+    width: 95%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  header {
+    text-align: center;
+    flex-direction: column;
+  }
+
+  nav.topnav {
+    margin-top: .5rem;
+  }
+
+  main.homepage {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  article.blog {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+
+  main.homepage aside.recent {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    margin-left: 1em;
+  }
+
+  main.homepage aside.links {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    margin-right: 1em;
+  }
+
+  section.campus {
+    grid-column: 1/3;
+    grid-template-columns: 1fr 1fr 1fr;
+
+  }
+
+  section.campus figure {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 2em;
+    align-items: center;
+  }
+
+  article.blog h2 {
+    font-size: 120%;
+  }
+
+  article.blog p {
+    line-height: 1.5;
+    font-size: 135%;
+    margin-bottom: 0;
+  }
+
+  main.homepage aside li {
+    margin-bottom: 1em;
+  }
+
+  section.campus figcaption {
+    font-size: 130%;
+  }
+}
 
 
 /* PHONE
 ---------------------------------------*/
 
+@media (max-width: 480px) {
+ 
+  div.wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  header {
+    margin: 0;
+  }
+
+  nav.topnav {
+    width: 98%;
+    margin-bottom: .5em;
+  }
+
+  nav.topnav ul {
+    flex-direction: column;
+  }
+
+  nav.topnav li {
+    border-bottom: 1px solid black;
+  }
+
+  nav.topnav li:last-of-type {
+    border: none;
+  }
+
+  main.homepage {
+    grid-template-columns: 1fr;
+  }
+
+  article.blog {
+    grid-column: 1/2;
+  }
+
+  main.homepage aside {
+    display: none;
+  }
+
+  section.campus {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+
+  section.campus h3 {
+    font-size: 125%;
+  }
+
+  section.campus figure {
+    grid-template-columns: 1fr 3fr;
+    background-color: rgb(79, 70, 87);
+    border-radius: 1rem;
+  }
+}
